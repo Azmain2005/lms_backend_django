@@ -21,6 +21,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "https://nomanchemistry.com",
+    "https://backend.nomanchemistry.com",
 ]
 
 # Quick-start development settings - unsuitable for production

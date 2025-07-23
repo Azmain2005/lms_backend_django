@@ -26,6 +26,7 @@ CORS_ALLOWED_ORIGINS = [
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-b+!tury-$c&22&iwnw8eqgk@ou2ib#^!dqeh3c@63_zm9l0@jz'
 
+DEBUG = os.getenv("DEBUG", "False") == "True"
 # SECURITY WARNING: don't run with debug turned on in production!
 if DEBUG:
     ALLOWED_HOSTS = [ ]

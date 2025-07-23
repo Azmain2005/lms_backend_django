@@ -21,10 +21,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://nomanchemistry.com",
+    "https://nomanchemistry.com",
     "http://backend.nomanchemistry.com",
     "https://backend.nomanchemistry.com",
 ]
 CSRF_TRUSTED_ORIGINS = [
+    "https://nomanchemistry.com",
     "http://nomanchemistry.com",
     "http://backend.nomanchemistry.com",
     "https://backend.nomanchemistry.com",

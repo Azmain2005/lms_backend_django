@@ -1,1 +1,4 @@
-
+django
+django-cors-headers
+django-jazzmin
+djangorestframework

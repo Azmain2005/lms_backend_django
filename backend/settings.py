@@ -20,10 +20,15 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://nomanchemistry.com",
+    "http://nomanchemistry.com",
+    "http://backend.nomanchemistry.com",
     "https://backend.nomanchemistry.com",
 ]
-
+CSRF_TRUSTED_ORIGINS = [
+    "http://nomanchemistry.com",
+    "http://backend.nomanchemistry.com",
+    "https://backend.nomanchemistry.com",
+]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 

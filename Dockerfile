@@ -19,7 +19,7 @@ COPY . /app/
 RUN python manage.py collectstatic --noinput
 
 # Expose port 8000
-EXPOSE 8000
+EXPOSE 5555
 
 # Start Django server
-CMD ["gunicorn", "myapp.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "myapp.wsgi:application", "--bind", "0.0.0.0:5555"]

@@ -22,4 +22,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 5555
 
 # Start Django server
-CMD ["gunicorn", "myapp.wsgi:application", "--bind", "0.0.0.0:5555"]
+CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:5555"]

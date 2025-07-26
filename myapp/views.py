@@ -44,7 +44,7 @@ class UsersRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
 class FormUserListCreate(generics.ListCreateAPIView):
     queryset = FormUser.objects.all()
     serializer_class = FormUserSerializer
-    permission_classes = [AdminOrReadOnly]
+    # permission_classes = [AdminOrReadOnly]
 
 class FormUserRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = FormUser.objects.all()

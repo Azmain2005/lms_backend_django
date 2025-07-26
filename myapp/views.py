@@ -3,7 +3,7 @@ from rest_framework import generics
 from .models import Course, Videos, Users, FormUser, PDF
 from .serializers import CourseSerializer, VideoSerializer, UsersSerializer, FormUserSerializer, PDFSerializer
 from .permissions import AdminOrReadOnly  # ✅ Import your custom permission
-
+from rest_framework.permissions import AllowAny
 # Course Views
 class CourseListCreate(generics.ListCreateAPIView):
     queryset = Course.objects.all()
@@ -44,13 +44,13 @@ class UsersRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
 class FormUserListCreate(generics.ListCreateAPIView):
     queryset = FormUser.objects.all()
     serializer_class = FormUserSerializer
-    # permission_classes = [AdminOrReadOnly]
+    permission_classes = [AllowAny]
 
 class FormUserRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = FormUser.objects.all()
     serializer_class = FormUserSerializer
     lookup_field = "pk"
-    # permission_classes = [AdminOrReadOnly]
+    permission_classes = [AdminOrReadOnly]
 
 # PDF Views
 class PDFListCreate(generics.ListCreateAPIView):

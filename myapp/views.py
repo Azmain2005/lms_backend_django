@@ -50,7 +50,7 @@ class FormUserRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = FormUser.objects.all()
     serializer_class = FormUserSerializer
     lookup_field = "pk"
-    permission_classes = [AdminOrReadOnly]
+    # permission_classes = [AdminOrReadOnly]
 
 # PDF Views
 class PDFListCreate(generics.ListCreateAPIView):
